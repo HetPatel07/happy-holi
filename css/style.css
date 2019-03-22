@@ -1,0 +1,103 @@
+body{
+    overflow: hidden;
+}
+
+.heading {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 900;
+    color: #fff;
+    filter: blur(2px);
+}
+
+
+.main {
+    /* overflow: auto; */
+    position: absolute;
+    bottom: -20px;
+
+}
+
+.main .color {
+    z-index: -1;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    padding: 0;
+    filter: blur(5px);
+}
+
+.color:nth-child(odd) {
+    background-color: red;
+    left: 0;
+    animation-name: hii1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(0, 0);
+    animation-timing-function: linear;
+}
+
+
+@keyframes hii {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(300px, -600px) scale(12);
+        opacity: 0;
+    }
+}
+
+@keyframes hii1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-300px, -600px) scale(12);
+        opacity: 0;
+    }
+}
+
+.color:nth-child(even) {
+    background-color: red;
+    right: 0;
+    animation-name: hii;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translate(0, 0) scale(1);
+    animation-timing-function: linear;
+}
+
+
+.color:nth-child(2) {
+    animation-delay: 1s;
+    background-color: blue;
+}
+
+.color:nth-child(3) {
+    animation-delay: 2s;
+    background-color: green;
+}
+
+.color:nth-child(4) {
+    animation-delay: 3s;
+    background-color: yellow;
+}
+
+
